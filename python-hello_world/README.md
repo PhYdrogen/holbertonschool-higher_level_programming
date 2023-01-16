@@ -1,1 +1,1 @@
-#Read me of Python beginner dev
+# Python beginner dev
