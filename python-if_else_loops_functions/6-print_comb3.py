@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for i in range(0,10):
-    for j in range(0,10):
+for i in range(0, 10):
+    for j in range(0, 10):
         if i == j or (i == 1 and j == 0):
             continue
         if i == 1 and j < 2:
@@ -17,9 +17,7 @@ for i in range(0,10):
             continue
         if i == 7 and j < 8:
             continue
-        if i == 8 and j < 9:
-            continue
-        if i == 9 and j < 10:
+        if i >= 8 and j < 10:
             continue
         print(f'{i}{j}, ', end="")
-print()
+print(89)
