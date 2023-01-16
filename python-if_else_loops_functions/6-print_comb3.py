@@ -19,5 +19,5 @@ for i in range(0, 10):
             continue
         if i >= 8 and j < 10:
             continue
-        print("{i}{j}, ".format(i), end="")
+        print("{0}{1}, ".format(i, j), end="")
 print("{89}")
