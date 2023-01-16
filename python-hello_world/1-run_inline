@@ -1,2 +1,2 @@
 #!/bin/bash
-python -c $PYCODE
+export PYCODE='print(f"4")' && python -c $PYCODE
