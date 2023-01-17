@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 import add
 
 if __main__:
