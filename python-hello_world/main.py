@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-print("C is fun")
-
+if __name__ == "__main__":
+    print("Best School")
