@@ -1,4 +1,4 @@
 #!/bin/bash
-python3 -m compileall "$PYFILE" ;
+python3 -m py_compile "$PYFILE" ;
 echo "Compiling $PYFILE ..." ;
 mv __pycache__/main* "${PYFILE}c"
