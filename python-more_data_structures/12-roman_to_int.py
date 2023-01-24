@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     dict_rom = dict(I=1, IV=4, V=5, IX=9, X=10, L=50, XC=90,
                     C=100, D=500, CM=900, M=1000)
-    if roman_string.isnumeric() or roman_string is None:
+    if type(roman_string) != str or roman_string is None:
         return 0
 
     last_char = ''
