@@ -10,4 +10,4 @@ class Square:
     def __init__(self, size):
         """ The module for creating a square
         """
-        self.size = size
+        self.__size = size
