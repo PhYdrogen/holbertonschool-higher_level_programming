@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """
-    Documentation yes
+    """ This is the class for the Square
+
     """
     pass
