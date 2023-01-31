@@ -10,8 +10,8 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """ this is my init
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """ Return the current square of the area of the square
@@ -45,7 +45,7 @@ class Square:
     def position(self, value):
         """ Pos Setter
         """
-        if value[0] < 0 and value[1] < 0:
+        if type(value) is not tuple or value[0] < 0 and value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
             self.__position = value
