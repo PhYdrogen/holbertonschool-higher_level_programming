@@ -18,4 +18,6 @@ SyntaxError
 
 #float overflow
 >>> add_integer(float(2**1023) + float(2**1023), 0)
-0
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
