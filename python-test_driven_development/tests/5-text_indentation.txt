@@ -7,12 +7,9 @@ Traceback (most recent call last):
 	...
 TypeError: text must be a string
 
->>> text_indentation("\n\n")
-<BLANKLINE>
-<BLANKLINE>
-
->>> text_indentation("\n")
-<BLANKLINE>
+>>> text_indentation("Hello\nWorld")
+Hello
+World
 
 >>> text_indentation()
 Traceback (most recent call last):
