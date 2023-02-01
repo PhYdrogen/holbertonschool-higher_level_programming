@@ -1,0 +1,11 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 3)
+4
+
+>>> add_integer('a', 3)
+TypeError: a must be an integer
+>>> add_integer(1)
+99
+
+>> add_integer()
+SyntaxError
