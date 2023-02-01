@@ -16,13 +16,15 @@ def matrix_divided(matrix, div):
     for list_row in matrix:
         new_row_matrix = []
         if len_matrix != len(list_row):
-            raise TypeError('matrix must have each row with the same size')
+            raise TypeError('Each row of the matrix must have the same size')
         for elem in list_row:
             try:
                 rep = elem / div
                 new_row_matrix.append(round(rep, 2))
             except ZeroDivisionError:
                 raise ZeroDivisionError('division by zero')
+            except TypeError:
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
         new_matrix.append(new_row_matrix)
 
     return new_matrix
