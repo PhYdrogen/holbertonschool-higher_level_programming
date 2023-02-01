@@ -21,6 +21,5 @@ Traceback (most recent call last):
 	...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
->>> x = float('NaN')
->>> add_integer(x, 0)
+>>> add_integer(float('NaN'), 0)
 89
