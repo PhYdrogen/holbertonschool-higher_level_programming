@@ -21,3 +21,7 @@ SyntaxError
 Traceback (most recent call last):
 	...
 OverflowError: cannot convert float infinity to integer
+
+>>> x = float('nan')
+>>> add_integer(x, 0)
+0
