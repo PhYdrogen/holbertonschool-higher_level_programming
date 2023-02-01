@@ -6,12 +6,13 @@
 def matrix_divided(matrix, div):
     """ Doc
     """
+    e = "matrix must be a matrix (list of lists) of integers/floats"
     if (type(div) is not int) and (type(div) is not float):
         raise TypeError('div must be a number')
     if matrix is None or type(matrix) is not list:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(e)
     if type(matrix[0]) is not list:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(e)
     if div == float('inf') or div == -float('inf') or div != div:
         div = 1000
 
@@ -28,7 +29,7 @@ def matrix_divided(matrix, div):
             except ZeroDivisionError:
                 raise ZeroDivisionError('division by zero')
             except TypeError:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError(e)
         new_matrix.append(new_row_matrix)
 
     return new_matrix
