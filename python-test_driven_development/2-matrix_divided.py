@@ -10,6 +10,10 @@ def matrix_divided(matrix, div):
         raise TypeError('div must be a number')
     if matrix is None or type(matrix) is not list:
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    if type(matrix[0]) is not list:
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 1000
 
     len_matrix = len(matrix[0])
     new_matrix = []
