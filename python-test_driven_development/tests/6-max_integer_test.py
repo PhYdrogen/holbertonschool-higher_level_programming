@@ -2,14 +2,27 @@
 """Unittest for max_integer([..])
 """
 import unittest
-max_integer = __import__('6-max_integer').max_integer
+
+
+def max_integer(list=[]):
+    """Doc
+    """
+    if len(list) == 0:
+        return None
+    result = list[0]
+    i = 1
+    while i < len(list):
+        if list[i] > result:
+            result = list[i]
+        i += 1
+    return result
 
 
 class TestMaxInteger(unittest.TestCase):
     """Doc for Unittest
     """
 
-    def maxatend(self):
+    def test_maxatend(self):
         """Test if last is max
         """
         test = [1, 2, 3]
