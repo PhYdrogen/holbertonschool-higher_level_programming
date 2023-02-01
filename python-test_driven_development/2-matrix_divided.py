@@ -11,10 +11,12 @@ def matrix_divided(matrix, div):
     if matrix is None or type(matrix) is not list:
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
 
-    len_matrix = len(matrix)
+    len_matrix = len(matrix[0])
     new_matrix = []
     for list_row in matrix:
         new_row_matrix = []
+        if len_matrix != len(list_row):
+            raise TypeError('matrix must have each row with the same size')
         for elem in list_row:
             try:
                 rep = elem / div
