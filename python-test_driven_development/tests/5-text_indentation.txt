@@ -7,10 +7,14 @@ Traceback (most recent call last):
 	...
 TypeError: text must be a string
 
->>> text_indentation("""Hello\n\nWorld""")
-Hello
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
 <BLANKLINE>
-World
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
 
 >>> text_indentation()
 Traceback (most recent call last):
