@@ -7,8 +7,9 @@ Traceback (most recent call last):
 	...
 TypeError: text must be a string
 
->>> text_indentation("Hello\nWorld")
+>>> text_indentation("Hello\n\nWorld")
 Hello
+<BLANKLINE>
 World
 
 >>> text_indentation()
