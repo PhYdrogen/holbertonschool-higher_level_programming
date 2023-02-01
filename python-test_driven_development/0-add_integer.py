@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+""" Module add_integer
+"""
+
+
 def add_integer(a, b=98):
+    """ This function add two number
+    """
+
     if type(a) is float or type(a) is int:
         if type(b) is float or type(b) is int:
             return int(a) + int(b)
