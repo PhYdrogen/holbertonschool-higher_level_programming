@@ -45,6 +45,9 @@ class Rectangle:
         return 2*(self.height + self.width)
 
     def __str__(self):
+        if self.height == 0 or self.width == 0:
+            return ""
+
         for longeur in range(self.height):
             for case in range(self.width):
                 print("#", end="")
