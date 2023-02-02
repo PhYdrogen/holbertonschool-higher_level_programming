@@ -44,11 +44,12 @@ class Rectangle:
             return 0
         return 2*(self.height + self.width)
 
-    def __repr__(self):
+    def __str__(self):
         for longeur in range(self.height):
             for case in range(self.width):
                 print("#", end="")
-            print()
-
-    def __str__(self):
-        print("Area: {} - Perimeter: {}".format(self.area(), self.perimeter()))
+            if longeur + 1 == self.height:
+                pass
+            else:
+                print()
+        return ""
