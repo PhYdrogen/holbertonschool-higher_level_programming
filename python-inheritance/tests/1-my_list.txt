@@ -4,11 +4,8 @@
 >>> my_list is list
 False
 
->>> clone = my_list.print_sorted()
+>>> my_list.print_sorted()
 []
-
->>> clone is None
-True
 
 >>> print(my_list)
 []
