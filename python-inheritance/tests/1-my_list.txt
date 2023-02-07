@@ -25,8 +25,8 @@ True
 >>> clone = my_list.print_sorted()
 [1, 2, 3]
 
->>> clone is list
-False
+>>> clone is None
+True
 
 #check print_sorted() with no sorted append with negative number
 
