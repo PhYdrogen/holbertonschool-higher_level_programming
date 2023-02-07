@@ -4,6 +4,9 @@
 
 
 class BaseGeometry:
+    """ Doc
+    """
+
     def __init__(self):
         pass
 
