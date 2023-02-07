@@ -28,3 +28,12 @@ True
 >>> clone is my_list
 False
 
+#check print_sorted() with no sorted append with negative number
+
+>>> nsawnn_list = MyList()
+
+>>> nsawnn_list.append(-1)
+>>> nsawnn_list.append(-4)
+>>> nsawnn_list.append(-2)
+>>> nsawnn_list.print_sorted()
+[-4, -2, -1]
