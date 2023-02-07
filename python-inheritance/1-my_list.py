@@ -10,4 +10,4 @@ class MyList(list):
         copy_list = self[:]
         if len(copy_list) == 0:
             return []
-        return sorted(copy_list)
+        print(sorted(copy_list))
