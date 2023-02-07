@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Doc
+""" file holding fn
 """
 
 
-def loopkup(obj):
-    """ Doc
+def lookup(obj):
+    """ lookup fn
     """
     return dir(obj)
