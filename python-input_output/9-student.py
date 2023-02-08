@@ -10,7 +10,7 @@ class Student:
         """ init method
         """
         self.first_name = fn
-        self.last_name = fn
+        self.last_name = ln
         self.age = age
 
     def to_json(self):
