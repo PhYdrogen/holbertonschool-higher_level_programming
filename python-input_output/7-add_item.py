@@ -7,7 +7,7 @@ if __name__ == '__main__':
     from os import path
 
     save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
-    load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+    load_from = __import__("6-load_from_json_file").load_from_json_file
 
     file = "add_item.json"
     exist_file = path.exists(file)
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     elif len(sys.argv) < 2:
         pass
     else:
-        data_as_obj = load_from_json_file(file)
+        data_as_obj = load_from(file)
         for i in range(1, len(sys.argv)):
             data_as_obj.append(sys.argv[i])
         save_to_json_file(data_as_obj, file)
