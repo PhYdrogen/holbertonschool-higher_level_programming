@@ -6,7 +6,7 @@
 def pascal_triangle(n):
     """ Doc
     """
-    if not isistance(n, int):
+    if not isinstance(n, int):
         return []
     if n <= 0:
         return []
