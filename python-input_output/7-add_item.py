@@ -22,5 +22,6 @@ if __name__ == '__main__':
         pass
     else:
         data_as_obj = load_from_json_file(file)
-        data_as_obj.append(sys.argv[1])
+        for i in range(1, len(sys.argv)):
+            data_as_obj.append(sys.argv[i])
         save_to_json_file(data_as_obj, file)
