@@ -51,3 +51,8 @@ class Square(Rectangle):
                 if count == 3:
                     self.y = arg
                 count += 1
+
+    def to_dictionary(self):
+        little_dict = {'id': self.id, 'size': self.width,
+                       'x': self.x, 'y': self.y}
+        return little_dict
