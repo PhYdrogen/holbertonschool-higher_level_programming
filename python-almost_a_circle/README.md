@@ -65,4 +65,46 @@ data = {"name": "John Doe", "age": 30}
 
 with open("data.json", "w") as f:
     json.dump(data, f)
+
+print(data["age"])
+```
+
+## *args and **kwargs
+
+In Python, the `*` and `**` syntax are used to pass a variable number of arguments to a function.
+
+`*args` is used to pass a non-keyworded, variable length argument list to a function. The syntax for using `*args` is to prefix the parameter name with an asterisk (`*`). Here's an example:
+
+```python
+def print_args(*args):
+    for arg in args:
+        print(arg)
+
+print_args(1, 2, 3)
+```
+
+**kwargs is used to pass keyworded, variable length of arguments to a function. The syntax for using **kwargs is to prefix the parameter name with two asterisks (**). Here's an example:
+
+```python
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_kwargs(name="John Doe", age=30)
+```
+
+Handling Named Arguments in a Function
+When defining a function, you can specify default values for arguments by assigning them in the function definition. If an argument is not provided when the function is called, the default value will be used. Here's an example:
+
+```python
+def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("John Doe")
+greet("Jane Doe", "Hi")
+```
+When calling the function, you can also specify the arguments by name, which is called named arguments. This allows you to specify the arguments in any order. Here's an example:
+
+```python
+greet(greeting="Hi", name="John Doe")
 ```
