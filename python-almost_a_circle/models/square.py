@@ -53,6 +53,7 @@ class Square(Rectangle):
                 count += 1
 
     def to_dictionary(self):
+        """ dict fn for json convertion """
         little_dict = {'id': self.id, 'size': self.width,
                        'x': self.x, 'y': self.y}
         return little_dict
