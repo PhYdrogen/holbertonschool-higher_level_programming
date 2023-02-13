@@ -47,9 +47,7 @@ class Square(Rectangle):
                 if count == 1:
                     self.width = arg
                 if count == 2:
-                    self.height = arg
-                if count == 3:
                     self.x = arg
-                if count == 4:
+                if count == 3:
                     self.y = arg
                 count += 1
