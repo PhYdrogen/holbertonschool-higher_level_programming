@@ -27,6 +27,7 @@ class Square(Rectangle):
                                                  self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
+        """ update the class and it's attribute """
         if len(args) == 0:
             for key, value in kwargs.items():
                 if key == "id":
@@ -51,4 +52,3 @@ class Square(Rectangle):
                 if count == 4:
                     self.y = arg
                 count += 1
-
