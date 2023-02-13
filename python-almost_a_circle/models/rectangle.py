@@ -89,6 +89,7 @@ class Rectangle(Base):
                                                        self.height)
 
     def update(self, *args):
+        """ this we can update rectangle on the go """
         count = 0
         for arg in args:
             if count == 0:
