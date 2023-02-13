@@ -72,7 +72,11 @@ class Rectangle(Base):
 
     def display(self):
         """ print the rect to stdout """
+        for Y in range(self.y):
+            print()
+
         for ligne in range(self.height):
+            print(" " * self.x if self.x > 0 else "", end="")
             for case in range(self.width):
                 print("#", end="")
             print()
