@@ -118,6 +118,8 @@ class Rectangle(Base):
                 count += 1
 
     def to_dictionary(self):
+        """ create a new dict for the fn and return it with it's attribute """
+
         the_dict = {}
         the_dict['x'] = self.x
         the_dict['y'] = self.y
