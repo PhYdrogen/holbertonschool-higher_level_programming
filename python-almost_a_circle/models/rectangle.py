@@ -116,3 +116,12 @@ class Rectangle(Base):
                 if count == 4:
                     self.y = arg
                 count += 1
+
+    def to_dictionary(self):
+        the_dict = {}
+        the_dict['x'] = self.x
+        the_dict['y'] = self.y
+        the_dict['width'] = self.width
+        the_dict['height'] = self.height
+        the_dict['id'] = self.id
+        return the_dict
