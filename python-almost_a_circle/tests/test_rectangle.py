@@ -15,3 +15,7 @@ class TestRectangle(unittest.TestCase):
     def test_basic_four(self):
         r3 = Rectangle(1, 2, 3, 4)
         self.assertEqual(r3.id, 4)
+
+
+if __name__ == '__main__':
+    unittest.main()

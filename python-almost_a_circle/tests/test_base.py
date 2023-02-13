@@ -15,3 +15,7 @@ class TestBase(unittest.TestCase):
     def test_base_assign_id_auto_2(self):
         b3 = Base(89)
         self.assertEqual(b3.id, 89)
+
+
+if __name__ == '__main__':
+    unittest.main()
