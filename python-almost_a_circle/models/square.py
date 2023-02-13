@@ -34,6 +34,7 @@ class Square(Rectangle):
                     self.id = value
                 if key == "size":
                     self.width = value
+                    self.height = value
                 if key == "x":
                     self.x = value
                 if key == "y":
