@@ -2,12 +2,12 @@
 
 In this readme, you will find information about:
 
-What is Unit testing and how to implement it in a large project
-How to serialize and deserialize a Class
-How to write and read a JSON file
-What is *args and how to use it
-What is **kwargs and how to use it
-How to handle named arguments in a function
+- What is Unit testing and how to implement it in a large project
+- How to serialize and deserialize a Class
+- How to write and read a JSON file
+- What is ``*args`` and how to use it
+- What is ``**kwargs`` and how to use it
+- How to handle named arguments in a function
 
 ## Unit Testing
 Unit testing is a software testing technique in which individual units or components of the code are tested in isolation from the rest of the system. The goal is to validate that each unit of the software application is working as intended. In a large project, it's important to implement unit tests to ensure that changes to the code do not break existing functionality.
@@ -83,7 +83,7 @@ def print_args(*args):
 print_args(1, 2, 3)
 ```
 
-**kwargs is used to pass keyworded, variable length of arguments to a function. The syntax for using **kwargs is to prefix the parameter name with two asterisks (**). Here's an example:
+``**kwargs`` is used to pass keyworded, variable length of arguments to a function. The syntax for using ``**kwargs`` is to prefix the parameter name with two asterisks (**). Here's an example:
 
 ```python
 def print_kwargs(**kwargs):
