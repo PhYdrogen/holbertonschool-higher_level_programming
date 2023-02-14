@@ -47,6 +47,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ create a new instance """
-        dummy = cls(3, 4)
+        try:
+            dummy = cls(1)
+        except TypeError:
+            dummy = cls(1, 1)
+
         dummy.update(**dictionary)
         return dummy
