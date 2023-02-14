@@ -19,6 +19,28 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ use the json lib to convert python obj to json string """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ this fn write to a file the list of instance of class
+            to_dict -> a dict of attribute
+            to_json_string -> transform a dict to string
+        """
+        if cls.__name__ == "Rectangle":
+            file_name = "Rectangle.json"
+        if cls.__name__ == "Square":
+            file_name = "Square.json"
+
+        with open(file_name, "w") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                f.write("[")
+                for key, item in enumerate(list_objs):
+                    f.write(item.to_json_string(item.to_dictionary()))
+                    if key != len(list_objs) - 1:
+                        f.write(", ")
+                f.write("]")
