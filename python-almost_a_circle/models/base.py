@@ -29,12 +29,7 @@ class Base:
             to_dict -> a dict of attribute
             to_json_string -> transform a dict to string
         """
-        if cls.__name__ == "Rectangle":
-            file_name = "Rectangle.json"
-        if cls.__name__ == "Square":
-            file_name = "Square.json"
-
-        with open(file_name, "w") as f:
+        with open("{}".format(cls.__name__), "w") as f:
             if list_objs is None:
                 f.write("[]")
             else:
@@ -48,3 +43,11 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         return json.loads("[]" if json_string is None else json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ create a new instance """
+        dummy = cls(3, 4)
+        for attribute, value in dictionary.items():
+            dummy.__setattr__(attribute, value)
+        return dummy
