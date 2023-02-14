@@ -44,3 +44,7 @@ class Base:
                     if key != len(list_objs) - 1:
                         f.write(", ")
                 f.write("]")
+
+    @staticmethod
+    def from_json_string(json_string):
+        return json.loads(json_string)
