@@ -48,6 +48,5 @@ class Base:
     def create(cls, **dictionary):
         """ create a new instance """
         dummy = cls(3, 4)
-        for attribute, value in dictionary.items():
-            dummy.__setattr__(attribute, value)
+        dummy.update(**dictionary)
         return dummy
