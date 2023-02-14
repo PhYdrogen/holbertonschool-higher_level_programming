@@ -29,7 +29,7 @@ class Base:
             to_dict -> a dict of attribute
             to_json_string -> transform a dict to string
         """
-        with open("{}".format(cls.__name__), "w") as f:
+        with open("{}.json".format(cls.__name__), "w") as f:
             if list_objs is None:
                 f.write("[]")
             else:
