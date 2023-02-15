@@ -7,11 +7,11 @@ class TestSquare(unittest.TestCase):
 
     def test_square_1(self):
         s1 = Square(1)
-        self.assertEqual(s1.id, 4)
+        self.assertEqual(s1.id, 3)
         s2 = Square(1, 2)
-        self.assertEqual(s2.id, 5)
+        self.assertEqual(s2.id, 4)
         s3 = Square(1, 2, 3)
-        self.assertEqual(s3.id, 6)
+        self.assertEqual(s3.id, 5)
         s4 = Square(1, 2, 3, 4)
         self.assertEqual(s4.id, 4)
 
@@ -46,14 +46,14 @@ class TestSquare(unittest.TestCase):
 
     def test_square_12(self):
         s5 = Square(1, 2, 3)
-        self.assertEqual(s5.__str__(), "[Square] (7) 2/3 - 1")
+        self.assertEqual(s5.__str__(), "[Square] (6) 2/3 - 1")
         s6 = Square(1, 2, 3)
         self.assertEqual(s6.to_dictionary(),
-                         {'id': 8, 'size': 1, 'x': 2, 'y': 3})
+                         {'id': 7, 'size': 1, 'x': 2, 'y': 3})
         s7 = Square(10, 20, 30)
         s7.update()
         self.assertEqual(s7.to_dictionary(),
-                         {'id': 9, 'size': 10, 'x': 20, 'y': 30})
+                         {'id': 8, 'size': 10, 'x': 20, 'y': 30})
         s8 = Square(10, 20, 30)
         s8.update(89)
         self.assertEqual(s8.to_dictionary(),
