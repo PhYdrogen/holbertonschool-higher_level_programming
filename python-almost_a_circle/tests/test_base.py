@@ -4,6 +4,7 @@ from models.base import Base
 from models.square import Square
 
 
+
 class TestBase(unittest.TestCase):
     def test_base_assign_id_auto_0(self):
         b1 = Base()
