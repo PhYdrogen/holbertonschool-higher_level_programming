@@ -1,1 +1,1 @@
-test_models/test_square.py
+#!/usr/bin/python3

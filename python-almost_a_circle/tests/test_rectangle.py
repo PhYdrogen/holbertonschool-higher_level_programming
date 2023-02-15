@@ -1,1 +1,1 @@
-test_models/test_rectangle.py
+#!/usr/bin/python3
