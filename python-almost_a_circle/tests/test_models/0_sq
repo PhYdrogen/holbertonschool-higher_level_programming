@@ -4,9 +4,14 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    def setUp(self):
+        self.square = Square(1)
+
+    def tearDown(self):
+        del self
+
     def test_square_1(self):
-        s1 = Square(1)
-        self.assertEqual(s1.id, 1)
+        self.assertEqual(self.square.id, 1)
 
     def test_square_1_2(self):
         s2 = Square(1, 2)

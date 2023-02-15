@@ -4,13 +4,14 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    def setUp(self):
+        self.base = Base()
+
     def test_base_assign_id_auto_0(self):
-        b1 = Base()
-        self.assertEqual(b1.id, 1)
+        self.assertEqual(self.base.id, 1)
 
     def test_base_assign_id_auto_1(self):
-        b2 = Base()
-        self.assertEqual(b2.id, 2)
+        self.assertEqual(self.base.id, 2)
 
     def test_base_assign_id_auto_2(self):
         b3 = Base(89)
