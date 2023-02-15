@@ -57,18 +57,18 @@ class TestSquare(unittest.TestCase):
 
     def test_square_str(self):
         s5 = Square(1, 2, 3)
-        self.assertEqual(s5.__str__(), "[Square] (16) 2/3 - 1")
+        self.assertEqual(s5.__str__(), "[Square] (18) 2/3 - 1")
 
     def test_square_tp_dict(self):
         s6 = Square(1, 2, 3)
         self.assertEqual(s6.to_dictionary(),
-                         {'id': 17, 'size': 1, 'x': 2, 'y': 3})
+                         {'id': 19, 'size': 1, 'x': 2, 'y': 3})
 
     def test_square_update(self):
         s7 = Square(10, 20, 30)
         s7.update()
         self.assertEqual(s7.to_dictionary(),
-                         {'id': 18, 'size': 10, 'x': 20, 'y': 30})
+                         {'id': 20, 'size': 10, 'x': 20, 'y': 30})
 
     def test_square_update_89(self):
         s8 = Square(10, 20, 30)
@@ -125,9 +125,26 @@ class TestSquare(unittest.TestCase):
             "Square.__init__() missing 1 required positional argument: 'size'"
             in str(context.exception))
 
-    def test_square_create_2(self):
+    def test_square_create_1(self):
         with self.assertRaises(TypeError) as context:
             Square().create(**{'id': 89, 'size': 1})
+        self.assertTrue(
+            "Square.__init__() missing 1 required positional argument: 'size'"
+            in str(context.exception))
+
+    def test_square_create_1_2(self):
+        s16 = Square.create(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(s16.to_dictionary(),
+                         {'id': 89, 'size': 1, 'x': 2, 'y': 0})
+
+    def test_square_create_1_2_3(self):
+        s16 = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(s16.to_dictionary(),
+                         {'id': 89, 'size': 1, 'x': 2, 'y': 3})
+
+    def test_square_save_json(self):
+        with self.assertRaises(TypeError) as context:
+            Square().save_to_file(None)
         self.assertTrue(
             "Square.__init__() missing 1 required positional argument: 'size'"
             in str(context.exception))
