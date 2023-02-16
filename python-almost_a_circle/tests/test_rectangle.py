@@ -8,7 +8,12 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as context:
             Rectangle(1, "2")
         self.assertTrue('height must be an integer' in str(context.exception))
-    
+
+    def test_rectangle_1_0(self):
+      with self.assertRaises(ValueError) as context:
+        Rectangle(1, 0)
+      self.assertTrue('height must be > 0' in str(context.exception))
+
     def test_rectangle_1_2(self):
         r2 = Rectangle(1, 2)
         self.assertEqual(r2.height, 2)
