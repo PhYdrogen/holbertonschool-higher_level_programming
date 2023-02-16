@@ -34,9 +34,9 @@ class TestRectangle(unittest.TestCase):
         r5 = Rectangle(1, 1)
         self.assertEqual("{}".format(r5), "[Rectangle] ({}) 0/0 - 1/1".format(r5.id)) 
 
-    def test_square_tp_dict(self):
-        s6 = Rectangle(1, 2, 3)
-        self.assertEqual(type(s6.to_dictionary()), dict)
+    def test_rectangle_tp_dict(self):
+        s6 = Rectangle(1, 2, 3).to_dictionary()
+        self.assertEqual(type(s6), dict)
 
 if __name__ == '__main__':
     unittest.main()
