@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 import unittest
+import os
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    @classmethod
+    def tearDown(self):
+        if os.path.exists("./Rectangle.json"):
+            os.remove("Rectangle.json")
+        
     def test_rectangle_1_string_2(self):
         with self.assertRaises(TypeError) as context:
             Rectangle(1, "2")
@@ -64,17 +70,19 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r8.y, 4)
         
     def test_rectangle_save(self):
-        r9 = Rectangle(1, 2, 0, 0, 13)
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
           self.assertEqual(file.read(), '[]')
         file.close()
-
+    
+    def test_rectangle_save_empty(self):
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
-          self.assertEqual(file.read(), '[]')
+          self.assertEqual(file.read(), "[]")
         file.close()
 
+    def test_rectangle_save_rect(self):
+        r9 = Rectangle(1, 2, 0, 0, 13)
         Rectangle.save_to_file([r9])
         with open("Rectangle.json", "r") as file:
           self.assertEqual(file.read(), '[{"x": 0, "y": 0, "width": 1, "height": 2, "id": 13}]')
