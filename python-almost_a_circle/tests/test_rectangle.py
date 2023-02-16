@@ -26,6 +26,14 @@ class TestSquare(unittest.TestCase):
         r3 = Rectangle(1, 2, 3, 4)
         self.assertEqual(r3.y, 4)
 
+    def test_area(self):
+        r4 = Rectangle(1, 1)
+        self.assertEqual(r4.area(), 1)
+
+    def test_str(self):
+        r5 = Rectangle(1, 1)
+        self.assertEqual("{}".format(r5), "[Rectangle] (8) 0/0 - 1/1") 
+
 
 if __name__ == '__main__':
     unittest.main()
