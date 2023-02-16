@@ -76,6 +76,10 @@ class TestSquare(unittest.TestCase):
         s8 = Square.create(**{'id': 89, 'size': 1, 'x': 3, 'y': 4})
         self.assertEqual(s8.y, 4)
 
+    def test_str(self):
+        r9 = Square(1)
+        self.assertEqual("{}".format(r9), "[Square] ({}) 0/0 - 1".format(r9.id)) 
+
 
 if __name__ == '__main__':
     unittest.main()
