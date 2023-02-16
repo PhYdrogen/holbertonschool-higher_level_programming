@@ -64,8 +64,14 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r8.y, 4)
         
     def test_rectangle_save(self):
-        r9 = Rectangle(90, 90, 3, 3, 900)
-        self.assertEqual(r9.save_to_file(None), None)
+        #r9 = Rectangle(1, 2)
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+          self.assertEqual(file.read(), '[]')
+        file.close()
+      
+        #self.assertEqual(Rectangle.save_to_file([]), None)
+        #self.assertEqual(Rectangle.save_to_file([r9]), None)
        
 if __name__ == '__main__':
     unittest.main()
