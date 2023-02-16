@@ -50,6 +50,18 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(s7.x, 3)
         s7.update(89, 1, 2, 3, 4)
         self.assertEqual(s7.y, 4)
+
+    def test_rectangle_create(self):
+        r8 = Rectangle.create(**{'id': 89})
+        self.assertEqual(r8.id, 89)
+        r8 = Rectangle.create(**{'id': 89, 'width': 1})
+        self.assertEqual(r8.width, 1)
+        r8 = Rectangle.create(**{'id': 89, 'width': 1, 'height':2})
+        self.assertEqual(r8.height, 2)
+        r8 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(r8.x, 3)        
+        r8 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(r8.y, 4)
         
        
 if __name__ == '__main__':
