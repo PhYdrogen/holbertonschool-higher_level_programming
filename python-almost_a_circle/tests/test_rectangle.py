@@ -3,7 +3,7 @@ import unittest
 from models.rectangle import Rectangle
 
 
-class TestSquare(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     def test_rectangle_1_string_2(self):
         with self.assertRaises(TypeError) as context:
             Rectangle(1, "2")
@@ -34,6 +34,9 @@ class TestSquare(unittest.TestCase):
         r5 = Rectangle(1, 1)
         self.assertEqual("{}".format(r5), "[Rectangle] ({}) 0/0 - 1/1".format(r5.id)) 
 
+    def test_square_tp_dict(self):
+        s6 = Square(1, 2, 3)
+        self.assertEqual(type(s6.to_dictionary()), dict)
 
 if __name__ == '__main__':
     unittest.main()
