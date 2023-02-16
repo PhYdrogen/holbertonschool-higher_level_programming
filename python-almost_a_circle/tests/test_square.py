@@ -66,5 +66,16 @@ class TestSquare(unittest.TestCase):
         s7.update(89, 1, 2, 3)
         self.assertEqual(s7.y, 3)
 
+    def test_square_create(self):
+        s8 = Square.create(**{'id': 89})
+        self.assertEqual(s8.id, 89)
+        s8 = Square.create(**{'id': 89, 'size': 1})
+        self.assertEqual(s8.size, 1)
+        s8 = Square.create(**{'id': 89, 'size': 1, 'x': 3})
+        self.assertEqual(s8.x, 3)        
+        s8 = Square.create(**{'id': 89, 'size': 1, 'x': 3, 'y': 4})
+        self.assertEqual(s8.y, 4)
+
+
 if __name__ == '__main__':
     unittest.main()
