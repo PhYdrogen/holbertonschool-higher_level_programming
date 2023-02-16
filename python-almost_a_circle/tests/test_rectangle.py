@@ -63,6 +63,9 @@ class TestRectangle(unittest.TestCase):
         r8 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r8.y, 4)
         
+    def test_rectangle_save(self):
+        r9 = Rectangle(90, 90, 3, 3, 900)
+        self.assertEqual(r9.save_to_file(None), None)
        
 if __name__ == '__main__':
     unittest.main()
