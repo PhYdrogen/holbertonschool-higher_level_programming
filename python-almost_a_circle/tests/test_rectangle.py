@@ -32,7 +32,7 @@ class TestSquare(unittest.TestCase):
 
     def test_str(self):
         r5 = Rectangle(1, 1)
-        self.assertEqual("{}".format(r5), "[Rectangle] (8) 0/0 - 1/1") 
+        self.assertEqual("{}".format(r5), "[Rectangle] ({}) 0/0 - 1/1".format(r5.id)) 
 
 
 if __name__ == '__main__':
