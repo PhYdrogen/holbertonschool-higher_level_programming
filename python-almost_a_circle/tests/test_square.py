@@ -55,6 +55,16 @@ class TestSquare(unittest.TestCase):
             Square(0)
         self.assertTrue('width must be > 0' in str(context.exception))
 
+    def test_square_update(self):
+        s7 = Square(1, 2, 3)
+        s7.update(89)
+        self.assertEqual(s7.id, 89)
+        s7.update(89, 1)
+        self.assertEqual(s7.size, 1)
+        s7.update(89, 1, 2)
+        self.assertEqual(s7.x, 2)
+        s7.update(89, 1, 2, 3)
+        self.assertEqual(s7.y, 3)
 
 if __name__ == '__main__':
     unittest.main()
