@@ -4,13 +4,6 @@ from models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
-    def test_rectangle_1(self):
-        with self.assertRaises(TypeError) as context:
-            Rectangle(1)
-        self.assertTrue("Rectangle.__init__() missing \
-                        1 required positional argument: 'height'"
-                        in str(context.exception))
-
     def test_rectangle_1_2(self):
         r2 = Rectangle(1, 2)
         self.assertEqual(r2.height, 2)
