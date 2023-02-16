@@ -4,6 +4,11 @@ from models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
+    def test_rectangle_1_string_2(self):
+        with self.assertRaises(TypeError) as context:
+            Rectangle(1, "2")
+        self.assertTrue('height must be an integer' in str(context.exception))
+    
     def test_rectangle_1_2(self):
         r2 = Rectangle(1, 2)
         self.assertEqual(r2.height, 2)
