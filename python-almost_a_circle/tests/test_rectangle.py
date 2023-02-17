@@ -88,6 +88,8 @@ class TestRectangle(unittest.TestCase):
           self.assertEqual(file.read(), '[{"x": 0, "y": 0, "width": 1, "height": 2, "id": 13}]')
         file.close()
 
+    def test_load_rect(self):
+        r10 = Rectangle.load_from_file()
         
         
 if __name__ == '__main__':
