@@ -102,6 +102,14 @@ class TestRectangle(unittest.TestCase):
       
         self.assertEqual(sortie, '##\n##\n')
         
+    def test_display_exist(self):
+        r11 = Rectangle(2, 2, 1, 1, 90)
+        sortie = io.StringIO()
+        with contextlib.redirect_stdout(sortie):
+          r11.display()
+        sortie = sortie.getvalue()
+      
+        self.assertEqual(sortie, '\n ##\n ##\n')
         
 if __name__ == '__main__':
     unittest.main()
