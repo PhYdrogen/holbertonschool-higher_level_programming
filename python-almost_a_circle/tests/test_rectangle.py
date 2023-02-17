@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import unittest
 import os
+import io
+import contextlib
 from models.rectangle import Rectangle
 
 
@@ -90,6 +92,15 @@ class TestRectangle(unittest.TestCase):
 
     def test_load_rect(self):
         r10 = Rectangle.load_from_file()
+        
+    def test_display_rect(self):
+        r10 = Rectangle(2, 2, 0, 0, 90)
+        sortie = io.StringIO()
+        with contextlib.redirect_stdout(sortie):
+          r10.display()
+        sortie = sortie.getvalue()
+      
+        self.assertEqual(sortie, '##\n##\n')
         
         
 if __name__ == '__main__':
