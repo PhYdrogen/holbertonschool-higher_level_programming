@@ -7,8 +7,8 @@ from models.square import Square
 class TestSquare(unittest.TestCase):
     @classmethod
     def tearDown(self):
-        if os.path.exists("./Rectangle.json"):
-            os.remove("Rectangle.json")
+        if os.path.exists("./Square.json"):
+            os.remove("Square.json")
           
     def test_square_1(self):
         s1 = Square(1)
