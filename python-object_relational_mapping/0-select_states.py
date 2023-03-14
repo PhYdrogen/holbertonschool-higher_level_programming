@@ -3,7 +3,7 @@
 if __name__ == "__main__":
     import MySQLdb as DB
     import sys
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 3:
         mysql_username = sys.argv[1]
         mysql_password = sys.argv[2]
         database_name = sys.argv[3]
