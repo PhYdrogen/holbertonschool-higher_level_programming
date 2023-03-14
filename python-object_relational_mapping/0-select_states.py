@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+""" DOCUMENTATIONS """
 import MySQLdb as DB
 # establish a database connection
 db_connect = DB.connect(host="localhost", port=3306, user="root", passwd="data", db="hbtn_0e_0_usa")
