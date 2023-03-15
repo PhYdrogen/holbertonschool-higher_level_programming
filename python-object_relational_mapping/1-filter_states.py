@@ -13,7 +13,7 @@ if __name__ == "__main__":
                                 passwd=mysql_password,
                                 db=database_name)
         db_cursor = db_connect.cursor()
-        db_cursor.execute("SELECT * FROM states WHERE states.name LIKE 'N%'")
+        db_cursor.execute("SELECT * FROM states WHERE states.name LIKE BINARY 'N%'")
         rows_selected = db_cursor.fetchall()
         for row in rows_selected:
             print(row)
