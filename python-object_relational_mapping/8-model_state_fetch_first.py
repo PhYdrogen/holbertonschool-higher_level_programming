@@ -15,5 +15,4 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     cursor = Session()
 
-    for num, ville in cursor.query(State.id, State.name).filter(State.id == 1):
-        print(f'{num}: {ville}')
+    print(cursor.query(State.id, State.name).first())
