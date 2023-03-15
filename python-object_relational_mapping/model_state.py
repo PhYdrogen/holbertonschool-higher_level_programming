@@ -7,7 +7,14 @@ if __name__ == "__main__":
 
     Base = declarative_base()
     class State(Base):
-        """ Class state that inherit of base """
+        """ Class state that inherit of base 
+            from the task 6,
+            tablename is the table of the bd
+            id is id
+            and
+            name is name
+            :)
+        """
 
         __tablename__ = 'states'
         id = Column("id", Integer, nullable=False,unique=True,
