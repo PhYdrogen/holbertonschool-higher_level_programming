@@ -30,3 +30,4 @@ if __name__ == "__main__":
             print(sep, end="")
             print(row[0], end="")
             sep = ", "
+        print()
