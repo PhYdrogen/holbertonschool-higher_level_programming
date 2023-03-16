@@ -17,3 +17,4 @@ if __name__ == "__main__":
 
     ins_update = cursor.query(State).filter(State.id == 2).first()
     ins_update.name = "New Mexico"
+    cursor.commit()
