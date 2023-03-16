@@ -17,3 +17,6 @@ if __name__ == "__main__":
     Louisiana = State(name="Louisiana")
     cursor.add(Louisiana)
     cursor.commit()
+
+    for col in cursor.query(State).filter(State.name=="Louisiana"):
+        print(f'{col.id}')
