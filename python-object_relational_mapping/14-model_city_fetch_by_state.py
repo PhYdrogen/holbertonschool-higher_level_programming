@@ -17,5 +17,5 @@ if __name__ == "__main__":
     cursor = Session()
 
     for i in cursor.query(State.name, City.id, City.name).\
-                       filter(City.state_id == State.id):
+            filter(City.state_id == State.id):
         print(f'{i[0]}: ({i[1]}) {i[2]}')
