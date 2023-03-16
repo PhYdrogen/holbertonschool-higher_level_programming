@@ -14,5 +14,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     cursor = Session()
-
-    print(cursor.query(State.id, State.name).first())
+    result = cursor.query(State.id, State.name).filter_by(id=1).first()
+    print(f'{result[0]}: {result[1]}')
