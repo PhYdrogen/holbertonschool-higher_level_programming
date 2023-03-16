@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" FIRST FETCH WITH PYTHON """
+""" FETCH SOME WITH PYTHON """
 
 if __name__ == "__main__":
     import sys
