@@ -4,9 +4,9 @@ if (isNaN(userNb)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < userNb; i++) {
-    for (let j = 0; j < userNb; j++) {     
+    for (let j = 0; j < userNb; j++) {
       process.stdout.write('X');
     }
-  console.log();
+    console.log();
   }
 }
