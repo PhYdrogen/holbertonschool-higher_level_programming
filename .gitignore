@@ -1,0 +1,7 @@
+*.pyc
+*-main.py
+
+SQL_more_queries/oui.sql
+SQL_introduction/temperatures.sql
+SQL_introduction/cat
+python-almost_a_circle/Square.json
