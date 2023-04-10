@@ -1,2 +1,3 @@
 #!/usr/bin/node
-class Reactangle {}
+class Rectangle {}
+module.exports = { Rectangle };
