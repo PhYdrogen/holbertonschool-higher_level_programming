@@ -7,7 +7,7 @@ req(process.argv[2], (err, res) => {
   const arr = JSON.parse(res.body).results;
   arr.forEach(item => {
     item.characters.forEach(itemofitem => {
-      if (itemofitem === 'https://swapi-api.hbtn.io/api/people/18/') {
+      if (itemofitem.includes("api/people/18/")) {
         count = count + 1;
       }
     });
