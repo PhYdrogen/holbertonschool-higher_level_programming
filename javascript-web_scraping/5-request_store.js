@@ -7,5 +7,5 @@ req(process.argv[2], (err, res) => {
   const data = res.body;
   fs.writeFile(process.argv[3], data, 'utf8', (err, result) => {
     if (err) console.log(err);
-  })
+  });
 });
